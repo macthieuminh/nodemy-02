@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 62.5%;
+}
+a {
+    text-decoration: none;
+}
+body {
+    position: relative;
+    height: 100vh;
+    background: rgb(238, 174, 202);
+    background: linear-gradient(
+        180deg,
+        rgba(238, 174, 202, 1) 0%,
+        rgba(30, 70, 117, 1) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.app {
+    /* height: 400px; */
+    width: 300px;
+    border-radius: 18px;
+    background: rgb(2, 0, 36);
+    text-align: center;
+    padding: 4px;
+}
+
+.avatar-block {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 25px auto;
+}
+.avatar {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.name {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.title {
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #fdbb09;
+    margin-bottom: 8px;
+}
+.skills {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #ccc;
+    line-height: 1.6;
+    word-break: normal;
+    padding: 0 18px;
+}
+.social {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.social i {
+    color: #fff;
+    font-size: 2.4rem;
+}
+.donation {
+    margin: 22px 0;
+}
+
+.btn-grad {
+    background-image: linear-gradient(
+        to right,
+        #232526 0%,
+        #414345 51%,
+        #232526 100%
+    );
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #ccc;
+    box-shadow: 0 0 20px #ccc;
+    border-radius: 10px;
+    display: block;
+    font-size: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #ccc;
+    text-decoration: none;
+}
+@keyframes modalFadeIn {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+.modal.open {
+    display: flex;
+}
+.modal-container {
+    animation: modalFadeIn ease-in 0.5s;
+}
+.modal .close {
+    position: absolute;
+    right: -16px;
+    top: -37px;
+    font-size: 4rem;
+    color: #ccc;
+    cursor: pointer;
+}
+.img {
+    position: relative;
+}
+.modal img {
+    cursor: pointer;
+    width: 160px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
