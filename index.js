@@ -1,8 +1,14 @@
 const modal = document.querySelector(".modal");
-function openModal() {
-    modal.classList.add("open");
+const openBtn = document.querySelector(".btn-grad");
+const closeBtn = document.querySelector(".close");
+const modalContainer = document.querySelector(".modal-container");
+function toggleModal() {
+    modal.classList.toggle("open");
 }
-function closeModal() {
-    modal.classList.remove("open");
-}
-modal.addEventListener("click", closeModal);
+openBtn.addEventListener("click", toggleModal);
+closeBtn.addEventListener("click", toggleModal);
+modal.addEventListener("click", function (e) {
+    if (e.target === e.currentTarget) {
+        toggleModal();
+    }
+});

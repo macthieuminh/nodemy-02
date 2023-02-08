@@ -23,7 +23,6 @@ body {
     color: #fff;
 }
 .app {
-    /* height: 400px; */
     width: 300px;
     border-radius: 18px;
     background: rgb(2, 0, 36);
@@ -80,6 +79,7 @@ body {
 }
 
 .btn-grad {
+    cursor: pointer;
     background-image: linear-gradient(
         to right,
         #232526 0%,
@@ -132,23 +132,28 @@ body {
     display: flex;
 }
 .modal-container {
+    height: 50%;
+    width: 50%;
     animation: modalFadeIn ease-in 0.5s;
 }
 .modal .close {
     position: absolute;
-    right: -16px;
-    top: -37px;
+    top: -40px;
+    right: 19px;
     font-size: 4rem;
     color: #ccc;
     cursor: pointer;
 }
-.img {
+.img-wrap {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.modal img {
+.modal .momo {
     cursor: pointer;
-    width: 160px;
-    height: 220px;
+    width: 170px;
+    height: 230px;
     object-fit: cover;
     border-radius: 12px;
 }
