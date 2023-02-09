@@ -110,15 +110,18 @@ body {
     from {
         transform: translateX(-200px);
         opacity: 0;
+        transition: 0.5s;
     }
     to {
         transform: translateX(0);
         opacity: 1;
+        transition: 0.5s;
     }
 }
 .modal {
     display: none;
     position: fixed;
+    flex-direction: row;
     top: 0;
     left: 0;
     right: 0;
@@ -132,23 +135,19 @@ body {
     display: flex;
 }
 .modal-container {
-    height: 50%;
-    width: 50%;
+    width: 170px;
     animation: modalFadeIn ease-in 0.5s;
 }
 .modal .close {
     position: absolute;
     top: -40px;
-    right: 19px;
+    right: -18px;
     font-size: 4rem;
     color: #ccc;
     cursor: pointer;
 }
 .img-wrap {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .modal .momo {
     cursor: pointer;
